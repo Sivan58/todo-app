@@ -8,9 +8,9 @@ def color_df(val):
 	if val == "Done":
 		color = "green"
 	elif val == "Doing":
-		color = "orange"
+		color = "blue"
 	else:
-		color = "red"
+		color = "white"
 
 	return f'background-color: {color}'
 
