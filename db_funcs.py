@@ -38,6 +38,9 @@ def edit_task_data(new_task,new_task_status,new_task_date,task,task_status,task_
 	data = c.fetchall()
 	return data
 
+def force_create_table():
+	c.execute('CREATE TABLE taskstable(task TEXT,task_status TEXT,task_due_date DATE)')
+
 def delete_data(task):
 	c.execute('DELETE FROM taskstable WHERE task="{}"'.format(task))
 	conn.commit()
