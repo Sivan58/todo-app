@@ -13,7 +13,7 @@ def add_data(task,task_status,task_due_date):
 
 
 def view_all_data():
-	c.execute('SELECT * FROM taskstable')
+	c.execute('SELECT * FROM taskstables')
 	data = c.fetchall()
 	return data
 
@@ -37,6 +37,9 @@ def edit_task_data(new_task,new_task_status,new_task_date,task,task_status,task_
 	conn.commit()
 	data = c.fetchall()
 	return data
+
+def force_create_table():
+	c.execute('CREATE TABLE taskstable(task TEXT,task_status TEXT,task_due_date DATE)')
 
 def delete_data(task):
 	c.execute('DELETE FROM taskstable WHERE task="{}"'.format(task))
