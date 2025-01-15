@@ -13,7 +13,7 @@ def add_data(task,task_status,task_due_date):
 
 
 def view_all_data():
-	c.execute('SELECT * FROM taskstable')
+	c.execute('SELECT * FROM taskstables')
 	data = c.fetchall()
 	return data
 
